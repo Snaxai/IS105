@@ -2,7 +2,26 @@ package algorithms
 
 // Les https://en.wikipedia.org/wiki/Bubble_sort
 func Bubble_sort_modified(list []int) {
-	// Deres kode her
+	n := len(list)
+	for i := 0; i < n-1 && f; i++ {
+		f := 0
+		for j := i; j < n-1-i; j++ {
+			if list[j] > list[j+1] {
+				temp := list[j+1]
+				list[j+1] = list[j]
+				list[j] = temp
+				f := 1
+			}
+		}
+		for k := n - 2 - i; k > i && f; k-- {
+			if list[k] < list[k-1] {
+				temp := list[k-1]
+				list[k-1] = list[k]
+				list[k] = temp
+				f := 1
+			}
+		}
+	}
 }
 
 // Implementering av Bubble_sort algoritmen
