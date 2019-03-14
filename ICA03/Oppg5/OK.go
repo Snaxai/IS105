@@ -1,28 +1,18 @@
-
 package main
 
 import (
 	"fmt"
-	"io"
+	"io/ioutil"
 	"net"
-	"time"
 )
 
 func main() {
-	ln, err := net.Listen("tcp", ":5000")
+	conn, err := net.Dial("tcp", "localhost:5000")
 	if err != nil {
 		panic(err)
 	}
-	defer ln.Close()
+	defer conn.Close()
 
-	for {
-		conn, err := ln.Accept()
-		if err != nil {
-			panic(err)
-		}
-
-		io.WriteString(conn, fmt.Sprint("Ok\n", time.Now(), "\n"))
-
-		conn.Close()
-	}
+	bs, _ := ioutil.ReadAll(conn)
+	fmt.Println(string(bs))
 }
