@@ -1,8 +1,8 @@
-package main
+package BubbleSortPack
 
 import "fmt"
 
-func main() {
+func Bubble_sort_modified() {
 
 	a := []int{3, 9, 1, 2, 8, 4, 6, 10, 7, 5}
 
