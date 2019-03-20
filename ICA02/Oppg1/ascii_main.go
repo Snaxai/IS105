@@ -1,9 +1,9 @@
 package main
 
-import (
-	"github.com/Snaxai/is105-ica02/ascii"
-)
+import "github.com/Snaxai/IS105/ICA02/Oppg1/ascii"
 
 func main() {
 	ascii.IterateOverASCIIStringLiteral()
+	ascii.GetASCIIStringLiteral()
+	ascii.GreetingASCII()
 }
