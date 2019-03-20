@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-const PasserTest = "\x00\x02\x07\x1d\xHello :-)"
+const PasserTest = "\x00" + `Hello :-)`
 
 func TestGreetingASCII(t *testing.T) {
 	for i := 0; i < len(PasserTest); i++ {
