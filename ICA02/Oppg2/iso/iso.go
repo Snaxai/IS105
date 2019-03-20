@@ -32,3 +32,10 @@ func GreetingExtendedASCII() {
 	fmt.Printf("Salut, ça va °-) Κοστίζει €50")
 	fmt.Printf("Salut, ça va °-) Κοστίζει €50 Forstår du?")
 }
+
+// ASCIISkrivUtASCII asdasd
+func ASCIISkrivUtASCII() {
+	for i := 128; i <= 255; i++ {
+		fmt.Printf("%X, %q, %b \n", i, i, i)
+	}
+}
