@@ -1,7 +1,7 @@
 package main
 
-import "github.com/Snaxai/IS105/ICA02/Oppg2/iso"
+import iso "github.com/Sander/IS105/ICA02/Oppg2/ISO"
 
 func main() {
-	iso.IterateOverExtendedASCIIStringLiteral("asd")
+	iso.IterateOverExtendedASCIIStringLiteral("Hei på deg!")
 }
