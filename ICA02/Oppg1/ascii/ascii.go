@@ -32,5 +32,6 @@ func GetASCIIStringLiteral() string {
 }
 
 func GreetingASCII() {
-	fmt.Printf("Hello :-)")
+	tekst := "Hello :-)"
+	fmt.Printf(tekst)
 }

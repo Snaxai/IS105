@@ -5,9 +5,9 @@ import (
 	"testing"
 )
 
-const PasserTest = "\x00" + `Hello :-)`
+const PasserTest = `"Hello :-)"`
 
-func TestGreetingASCII(t *testing.T) {
+func TestASCII(t *testing.T) {
 	for i := 0; i < len(PasserTest); i++ {
 		if PasserTest[i] >= 126 {
 			t.Fail()
@@ -15,4 +15,8 @@ func TestGreetingASCII(t *testing.T) {
 		}
 		fmt.Println(PasserTest[i])
 	}
+}
+
+func TestGreetingASCII(t *testing.T) {
+	GreetingASCII()
 }
