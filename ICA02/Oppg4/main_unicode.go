@@ -5,7 +5,10 @@ import (
 )
 
 func main() {
-	unicode.Gethexadesimal("nord og sør")
+	unicode.Gethexadesimal("“北と南”")
+	unicode.Gethexadesimal("“norður og suður”")
+	unicode.Gethexadesimal("“nord og sør”")
 	unicode.Translate("nord og sør", "is")
+	unicode.Translate("nord og sør", "jp")
 	unicode.UnicodeCodePointDemo()
 }
