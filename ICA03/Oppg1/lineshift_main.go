@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
-	lineshift.Findlineshift()
 	lineshift.Findhexadesimal("tekst")
+	lineshift.FileToByteslice("text1.txt")
+	lineshift.FileToByteslice("textnolineshift.txt")
 }
