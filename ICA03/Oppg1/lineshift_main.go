@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
-	lineshift.FindLineShift()
+	lineshift.Findlineshift()
+	lineshift.Findhexadesimal("tekst")
 }
