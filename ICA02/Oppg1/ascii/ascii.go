@@ -8,29 +8,19 @@ const ascii = "\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f"
 	`@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_` +
 	"`abcdefghijklmnopqrstuvwxyz{|}~\x7f"
 
-// Oppgave 1b
-// Implementer en funksjon som eksportere const ascii
-
-// Funksjon tar en "string literal" med kun ASCII tegn og lager en utskrift på
-// følgende format:
-// [ascii-kode heksadesimalt med store bokstaver A-F][mellomrom]
-// [symbol for ascii-kode][mellomrom][ascii-kode binært][linjeskift]
-//
-// Eksempel (utskriften kommer fra en main.go fil):
-//	…
-// 3E > 111110
-// 3F ? 111111
-// 40 @ 1000000
+//IterateOverASCIIStringLiteral skriver ut tegn
 func IterateOverASCIIStringLiteral() {
 	for i := 0; i < len(ascii); i++ {
 		fmt.Printf("%X %q %b\n", ascii[i], ascii[i], ascii[i])
 	}
 }
 
+//GetASCIIStringLiteral returnerer ascii konstanten
 func GetASCIIStringLiteral() string {
 	return ascii
 }
 
+//GreetingASCII skriver ut en melding
 func GreetingASCII() {
 	tekst := "Hello :-)"
 	fmt.Printf(tekst)
