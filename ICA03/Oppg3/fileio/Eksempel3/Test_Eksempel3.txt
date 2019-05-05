@@ -1,0 +1,5 @@
+Dette er tekstfilen til vårt tredje eksempel. Formålet med dette eksempelet er å liste ut noe informasjon om denne tekstfilen vi
+nå befinner oss i, som heter Test_Eksempel3.txt. 
+
+Når vi kjører Eksempel3.go-filen vil vi først få listet ut navnet på denne tekstfilen, som er Test_Eksempel3.txt, deretter får
+vi skrevet ut størrelsen på denne filen, og flere parametre nedover.
