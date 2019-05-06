@@ -6,7 +6,7 @@ import (
 )
 
 func TestGreetingExtendedASCII(t *testing.T) {
-	IterateOverExtendedASCIIStringLiteral(GetExtendedASCIIStringLiteral())
+	IterateOverExtendedASCIIStringLiteralB(GetExtendedASCIIStringLiteral())
 }
 
 const PasserTest = "Salut, ça va °-) Ça coute €50" +

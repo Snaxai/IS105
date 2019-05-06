@@ -15,9 +15,16 @@ const ascii = "\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f"
 	"\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff"
 
 	// IterateOverExtendedASCIIStringLiteral For Løkke
-func IterateOverExtendedASCIIStringLiteral(slice string) {
-	for i := 0; i < len(slice); i++ {
-		fmt.Printf("%X, %q, %b \n", slice[i], slice[i], slice[i])
+func IterateOverExtendedASCIIStringLiteral() {
+	for i := 128; i < 255; i++ {
+		fmt.Printf("%X, %q, %b \n", i, i, i)
+	}
+}
+
+//IterateOverExtendedASCIIStringLiteralB skriver ut tegn til stringen tekst
+func IterateOverExtendedASCIIStringLiteralB(tekst string) {
+	for i := 0; i < len(tekst); i++ {
+		fmt.Printf("%X, %q, %b \n", tekst[i], tekst[i], tekst[i])
 	}
 }
 
