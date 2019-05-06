@@ -20,7 +20,7 @@ func GetASCIIStringLiteral() string {
 	return ascii
 }
 
-//GreetingASCII skriver ut en melding
+//GreetingASCII skriver ut en melding Hello :-)
 func GreetingASCII() {
 	tekst := "Hello :-)"
 	fmt.Printf(tekst)
