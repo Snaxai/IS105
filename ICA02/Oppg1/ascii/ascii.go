@@ -22,7 +22,7 @@ func GetASCIIStringLiteral() string {
 
 //GreetingASCII skriver ut en melding Hello :-)
 func GreetingASCII() {
-	tekst := "Hello :-)"
+	tekst := `"Hello :-)"`
 	for i := 0; i < len(tekst); i++ {
 		fmt.Printf("%X %q %b\n", tekst[i], tekst[i], tekst[i])
 	}
