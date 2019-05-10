@@ -46,8 +46,6 @@ func FileinfoFrequence(filnavn string) {
 	fmt.Printf("Symbolic link: %t\n", fileInfo.Mode()&os.ModeSymlink != 0)
 }
 
-var antlinjeskift int = 0
-
 //FileToByteslice finner linjeskift
 func FileToByteslice(filename string) []byte {
 	// Open file for reading
@@ -72,12 +70,18 @@ func FileToByteslice(filename string) []byte {
 		log.Fatal(err)
 	}
 	if bytes.Contains(byteSlice, lineBreak1) {
-		antlinjeskift := bytes.Count(byteSlice, lineBreak1)
-		fmt.Println("Det er", antlinjeskift, "linjeskift i denne filen.(Carriage return og lineshift)")
+		fmt.Println("Det er", bytes.Count(byteSlice, lineBreak1), "linjeskift i denne filen.(Carriage return og lineshift)")
 	} else if bytes.Contains(byteSlice, lineBreak2) {
 		fmt.Println("Det er", bytes.Count(byteSlice, lineBreak2), "linjeskift i denne filen.(Lineshift)")
 	} else {
 		fmt.Println("Det er ingen linjeskift i filen.")
 	}
 	return byteSlice
+}
+
+func Writetofile() {
+	err := ioutil.WriteFile("info.txt", []byte("asdasd\n"), 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

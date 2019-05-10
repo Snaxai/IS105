@@ -7,4 +7,5 @@ import (
 func main() {
 	frequence.FileinfoFrequence("pg100.txt")
 	frequence.FileToByteslice("pg100.txt")
+	frequence.Writetofile()
 }
