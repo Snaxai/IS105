@@ -1,3 +1,5 @@
+//Korter ned en bestemt fil.
+
 package main
 
 import (

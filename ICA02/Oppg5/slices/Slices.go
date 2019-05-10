@@ -15,8 +15,5 @@ func AllocateMake() {
 
 //AllocateVar deklarerer vi både variabler og bruker make til å lage selve slicen
 func AllocateVar() {
-	b := make([]byte, 10, 100)
-	fmt.Println(b)
-	fmt.Println(len(b))
-	fmt.Println(cap(b))
+
 }
