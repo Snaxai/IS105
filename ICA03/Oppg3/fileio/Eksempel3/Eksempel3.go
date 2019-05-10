@@ -1,3 +1,5 @@
+//Skriver ut informasjon om en valgt fil.
+
 package main
 
 import (
