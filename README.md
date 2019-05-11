@@ -19,4 +19,5 @@ Ha en fortreffelig sommer, og takk for et flott semester!
 
 Med vennlig hilsen,
 
-Gruppe 5.
+Gruppe 5. 
+
