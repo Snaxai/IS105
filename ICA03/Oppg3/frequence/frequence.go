@@ -2,6 +2,7 @@ package frequence
 
 import (
 	"bytes"
+	"flag"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -10,13 +11,20 @@ import (
 )
 
 //FileinfoFrequence skriver ut info om fil
-func FileinfoFrequence(filnavn string) {
-	file, err := os.Open(filnavn)
+func FileinfoFrequence() {
+
+	valgtFil := flag.String("f", "", "filnavn")
+
+	flag.Parse()
+	if *valgtFil == "" {
+		log.Fatal("Filen finnes ikke, bruk -f")
+	}
+	file, err := os.Open(*valgtFil)
 	if err != nil {
-		fmt.Printf("Kunne ikke åpne filen: "+filnavn+" %s\n", err)
+		fmt.Printf("Kunne ikke åpne filen: "+*valgtFil+" %s\n", err)
 		os.Exit(1)
 	}
-	size, err := ioutil.ReadFile(filnavn)
+	size, err := ioutil.ReadFile(*valgtFil)
 	if err != nil {
 		log.Panicf("failed at reading data from file: %s", err)
 	}
