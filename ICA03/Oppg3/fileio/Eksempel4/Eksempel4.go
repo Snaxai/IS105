@@ -1,3 +1,5 @@
+//Endrer navn på, og flytter en fil.
+
 package main
 
 import (

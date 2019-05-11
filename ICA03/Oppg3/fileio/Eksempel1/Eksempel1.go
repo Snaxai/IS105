@@ -1,3 +1,5 @@
+//Lager en ny tom fil
+
 package main
 
 import (
@@ -11,7 +13,7 @@ var (
 )
 
 func main() {
-	newFile, err = os.Create("test.txt")
+	newFile, err = os.Create("test1.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

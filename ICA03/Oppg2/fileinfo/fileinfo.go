@@ -1,4 +1,4 @@
-package main
+package fileinfo
 
 import (
 	"fmt"
@@ -7,19 +7,15 @@ import (
 	"os"
 )
 
-func main() {
-	filinfo()
-}
-
-func filinfo() {
-
-	file, err := os.Open("text.txt")
+//Filinfo skriver ut info om en fil
+func Filinfo(filnavn string) {
+	file, err := os.Open(filnavn)
 	if err != nil {
-		fmt.Printf("Kunne ikke åpne filen: text.txt %s\n", err)
+		fmt.Printf("Kunne ikke åpne filen: "+filnavn+" %s\n", err)
 		os.Exit(1)
 	}
 
-	size, err := ioutil.ReadFile("text.txt")
+	size, err := ioutil.ReadFile(filnavn)
 	if err != nil {
 		log.Panicf("failed at reading data from file: %s", err)
 	}
