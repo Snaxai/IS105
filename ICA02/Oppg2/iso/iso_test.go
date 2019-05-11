@@ -18,7 +18,7 @@ func TestASCII(t *testing.T) {
 			t.Fail()
 			fmt.Println("Value not a part of ascii in loop number", i, PasserTest[i])
 		}
-		if PasserTest[i] <= 128 {
+		if PasserTest[i] <= 0 {
 			t.Fail()
 			fmt.Println("Value not a part of ascii in loop number", i, PasserTest[i])
 			fmt.Println(PasserTest[i])
