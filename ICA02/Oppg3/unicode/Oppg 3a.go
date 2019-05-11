@@ -8,7 +8,17 @@ const unicode = "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98" //x8c kan bli gjort om til xc
 //for å skrie ut de riktige symbolene
 func SkrivUT() {
 	for i := 0; i < len(unicode); i++ {
-		fmt.Printf("%q", unicode[i])
+		fmt.Printf("%q ", unicode[i])
 	}
+}
 
+func SkrivUTx() {
+	for i := 0; i < len(unicode); i++ {
+		fmt.Printf("%x ", unicode[i])
+	}
+}
+
+//Printunicode skriver ut const unicode
+func Printunicode() {
+	fmt.Println(unicode)
 }
