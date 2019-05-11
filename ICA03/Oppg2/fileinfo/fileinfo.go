@@ -1,23 +1,32 @@
 package fileinfo
 
 import (
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
 )
 
-//Filinfo skriver ut info om en fil
-func Filinfo(filnavn string) {
-	file, err := os.Open(filnavn)
+//FilInformasjon skriver ut info om en fil
+func FilInformasjon() {
+
+	valgtFil := flag.String("f", "", "filnavn")
+
+	flag.Parse()
+	if *valgtFil == "" {
+		log.Fatal("Filen finnes ikke, bruk -f")
+	}
+
+	file, err := os.Open(*valgtFil)
 	if err != nil {
-		fmt.Printf("Kunne ikke åpne filen: "+filnavn+" %s\n", err)
+		fmt.Printf("Kunne ikke åpne filen: "+*valgtFil+" %s\n", err)
 		os.Exit(1)
 	}
 
-	size, err := ioutil.ReadFile(filnavn)
+	size, err := ioutil.ReadFile(*valgtFil)
 	if err != nil {
-		log.Panicf("failed at reading data from file: %s", err)
+		log.Panicf("Data kan ikke leses: %s", err)
 	}
 
 	//Skriver ut stats til filen text.txt
