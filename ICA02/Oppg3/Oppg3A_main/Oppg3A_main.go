@@ -12,4 +12,6 @@ func main() {
 	unicode.SkrivUTx()
 	fmt.Println()
 	unicode.Printunicode()
+	fmt.Println()
+	unicode.SkrivUTotherunicode()
 }
