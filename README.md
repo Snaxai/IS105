@@ -11,6 +11,8 @@ Gruppens medlemmer og kontaktinformasjon:
 
 Strukturen i repositoryet vårt fungerer som følgende. Hver ICA har sin egen mappe, hvor deloppgavene til hver ICA ligger i sin respektive mappe. I tillegg til at vi har lagt inn oppgavefilene våre, har vi også importert noen mapper og filer som vi fikk til vår disposisjon ved løsningen av de forskjellige oppgavene i ICAene.
 
+NB: For å kjøre kodene hvor vi har importert fra andre directories i vårt repo må import setningen endres til brukerens path.
+
 Litt oppsummert synes vi at faget IS105 har vært veldig spennende, og samtidig veldig utfordrende. Få av oss hadde noe dyp kunnskap om regnemaskiners grunnleggende funksjonalitet i forkant av dette semesteret, så læringskurven ble da meget bratt. Til å begynne med følte vi at vi var litt "lost" i faget, og slet veldig med å forstå de forskjellige oppgavene. Mot midten/slutten av semesteret begynte vi å jobbe mer strukturert og målrettet med faget, og følte da at litt forskjellige ting løsnet og flere av brikkene falt på plass. Vi klarte nå i større grad å knytte teori til praksis. Til å begynne med hadde de fleste av gruppens medlemmer kun noe grunnleggende kunnskap om programmeringsspråket Java, noe som gjorde det litt utfordrende med tanke på at vi nå skulle begynne med ett nytt språk, Golang. Etterhvert begynte vi også å forstå litt mer grunnleggende Golang, noe som har vært meget lærerikt ettersom vi nå har sett forskjellige måter på hvordan kode fungerer.
 
 Alt i alt har IS105 vært et meget spennende fag, og vi kommer alle til å ta med oss denne kunnskapen videre i både studiene og arbeidslivet!
