@@ -1,19 +1,33 @@
-package slices
+package slice
 
 import "fmt"
 
-//AllocateMake Her lager vi en slice uten å ha deklarert variablene på forhånd.
-func AllocateMake() {
-	b := make([]byte, 10, 10)
-	b[3] = 11
-	b[5] = 69
-	b = append(b, 12)
-	fmt.Println(b)
-	fmt.Println(len(b))
-	fmt.Println(cap(b))
+// AllocateVar har INN-argument b
+// b - antall bytes brukeren ønsker å allokere
+// Returnerer en slice av type []byte
+func AllocateVar(b int) []byte {
+	s := make([]byte, b, b)
+	s[3] = 11
+	s[5] = 69
+	s = append(s, 12)
+	fmt.Println(s)
+	fmt.Println(len(s))
+	fmt.Println(cap(s))
+	return s
 }
 
-//AllocateVar deklarerer vi både variabler og bruker make til å lage selve slicen
-func AllocateVar() {
-
+// AllocateMake tar lengde og kapasitet som b og lager en ny slice
+func AllocateMake(b int) []byte {
+	d := make([]byte, b, b)
+	fmt.Println(d)
+	fmt.Println(len(d))
+	fmt.Println(cap(d))
+	return d
 }
+
+// Reslice takes a slice and reslices it
+//func Reslice(slc []byte, lidx int, uidx int) []byte {
+
+//}
+
+// CopySlice ???
