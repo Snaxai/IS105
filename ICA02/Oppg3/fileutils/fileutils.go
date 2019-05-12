@@ -1,12 +1,13 @@
 package fileutils
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"os"
 )
 
-// FileToByteslice har en "string literal" som argument 
+// FileToByteslice har en "string literal" som argument
 // og returnerer en "slice"
 func FileToByteslice(filename string) []byte {
 
@@ -33,6 +34,12 @@ func FileToByteslice(filename string) []byte {
 	if err != nil {
 		log.Fatal(err)
 	}
+	//Skriver ut symbolene i filen (unicode codepoints)
+	fmt.Printf("%c\n", byteSlice)
+	//Skriver ut symbolene i filen (Go syntax)
+	fmt.Printf("%q\n", byteSlice)
+	//Skriver ut desimalene til symbolene i filen
+	fmt.Printf("", byteSlice)
 	return byteSlice
 
 }
