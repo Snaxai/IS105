@@ -59,14 +59,14 @@ var antlinjeskift int
 
 //FileToByteslice finner linjeskift
 func FileToByteslice() []byte {
-	valgtFil := flag.String("f", "", "filnavn")
+	valgtFil1 := flag.String("f", "", "filnavn")
 
 	flag.Parse()
-	if *valgtFil == "" {
+	if *valgtFil1 == "" {
 		log.Fatal("Filen finnes ikke, bruk -f")
 	}
 	// Open file for reading
-	file, err := os.Open(*valgtFil)
+	file, err := os.Open(*valgtFil1)
 
 	if err != nil {
 		log.Fatal(err)
@@ -100,7 +100,7 @@ func FileToByteslice() []byte {
 //Writetofile asd
 func Writetofile() {
 	tekst := strconv.Itoa(antlinjeskift)
-	err := ioutil.WriteFile("infoomfil.txt", []byte(tekst), 0644)
+	err := ioutil.WriteFile("infoomfil.txt", []byte("Det er "+tekst+" linjeskift i denne filen.(Carriage return og lineshift)"), 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
