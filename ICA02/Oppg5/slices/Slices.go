@@ -26,8 +26,8 @@ func AllocateMake(b int) []byte {
 }
 
 // Reslice takes a slice and reslices it
-//func Reslice(slc []byte, lidx int, uidx int) []byte {
-
-//}
+func Reslice(slc []byte, lidx int, uidx int) []byte {
+	AllocateMake()
+}
 
 // CopySlice ???

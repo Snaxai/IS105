@@ -1,6 +1,6 @@
 package main
 
-import "github.com/Snaxai/is105-ica01/boring"
+import "github.com/Snaxai/IS105/ICA01/Oppg5/boring"
 
 func main() {
 	boring.Boring01("ja")
