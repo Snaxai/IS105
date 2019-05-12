@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"strconv"
 )
 
 //FileinfoFrequence skriver ut info om fil
@@ -54,10 +55,18 @@ func FileinfoFrequence() {
 	fmt.Printf("Symbolic link: %t\n", fileInfo.Mode()&os.ModeSymlink != 0)
 }
 
+var antlinjeskift int
+
 //FileToByteslice finner linjeskift
-func FileToByteslice(filename string) []byte {
+func FileToByteslice() []byte {
+	valgtFil := flag.String("f", "", "filnavn")
+
+	flag.Parse()
+	if *valgtFil == "" {
+		log.Fatal("Filen finnes ikke, bruk -f")
+	}
 	// Open file for reading
-	file, err := os.Open(filename)
+	file, err := os.Open(*valgtFil)
 
 	if err != nil {
 		log.Fatal(err)
@@ -78,7 +87,8 @@ func FileToByteslice(filename string) []byte {
 		log.Fatal(err)
 	}
 	if bytes.Contains(byteSlice, lineBreak1) {
-		fmt.Println("Det er", bytes.Count(byteSlice, lineBreak1), "linjeskift i denne filen.(Carriage return og lineshift)")
+		antlinjeskift = bytes.Count(byteSlice, lineBreak1)
+		fmt.Println("Det er", antlinjeskift, "linjeskift i denne filen.(Carriage return og lineshift)")
 	} else if bytes.Contains(byteSlice, lineBreak2) {
 		fmt.Println("Det er", bytes.Count(byteSlice, lineBreak2), "linjeskift i denne filen.(Lineshift)")
 	} else {
@@ -87,8 +97,10 @@ func FileToByteslice(filename string) []byte {
 	return byteSlice
 }
 
+//Writetofile asd
 func Writetofile() {
-	err := ioutil.WriteFile("info.txt", []byte("asdasd\n"), 0644)
+	tekst := strconv.Itoa(antlinjeskift)
+	err := ioutil.WriteFile("infoomfil.txt", []byte(tekst), 0644)
 	if err != nil {
 		log.Fatal(err)
 	}

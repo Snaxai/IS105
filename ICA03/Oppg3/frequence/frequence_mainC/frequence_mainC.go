@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	frequence.FileToByteslice("pg100.txt")
-	textscanner.FinnAlle("pg100.txt")
+	frequence.FileToByteslice()
+	textscanner.FinnAlle()
 }
